@@ -3,10 +3,10 @@
 if(require("pacman")=="FALSE"){
   install.packages('pacman')
   library('pacman')
-  pacman::p_load(here,rvest,crayon,openxlsx,stringr,lubridate) # <- add libraries here
+  pacman::p_load(here,rvest,crayon,openxlsx,stringr,lubridate,doParallel) # <- add libraries here
 } else {
   library('pacman')
-  pacman::p_load(here,rvest,crayon,openxlsx,stringr,lubridate) # <- add libraries here
+  pacman::p_load(here,rvest,crayon,openxlsx,stringr,lubridate,doParallel) # <- add libraries here
 }
 
 p_loaded()
@@ -35,6 +35,9 @@ poster_url <- c()
 for (h in list.files(here::here('scripts'))){
   source(here::here('scripts',h))
 }
+
+#enables pararell processing
+do_parallel_function()
 
 #crawls the IMDB website for 2018 movies
 while (j <= 5000) {
