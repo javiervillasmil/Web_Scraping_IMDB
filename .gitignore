@@ -16,7 +16,5 @@ vignettes/*.pdf
 .httr-oauth
 
 #SSH KEY
-Web_Scraping_IMDB/github_key
-Web_Scraping_IMDB/github_key.pub
 github_key.pub
 github_key
